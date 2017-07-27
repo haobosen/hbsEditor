@@ -1,0 +1,40 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#editor {
+  width: 800px;
+  height: 400px;
+}
+
+#editor .hbs_editor_main {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#editor .hbs_editor_main .hbs_toolbar {
+  width: 100%;
+  background: #ccc;
+}
+
+#editor .hbs_editor_main .hbs_toolbar .toolbar_btn {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+}
+
+#editor .hbs_editor_main .hbs_edit_container {
+  font-size: 14px;
+  overflow: auto;
+}
+
+#editor .hbs_editor_main .hbs_edit_container .editarea {
+  background: #eee;
+}

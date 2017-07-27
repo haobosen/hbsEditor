@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>editor</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="editor">
+        <div class="hbs_editor_main">
+            <div class="hbs_toolbar">
+                <a class="toolbar_btn hbs_bold" href="javascript:;">加粗</a>
+                <a class="toolbar_btn hbs_italic" href="javascript:;">斜体</a>
+                <a class="toolbar_btn hbs_fontsize" href="javascript:;">字体</a>
+            </div>
+            <div class="hbs_edit_container">
+                <div class="editarea" contentEditable="true"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+<script>
+
+
+
+    hbsEditor.init('editor')
+</script>
+</html>
