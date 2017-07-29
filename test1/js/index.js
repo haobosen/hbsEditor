@@ -39,25 +39,23 @@ hbsEditor.prototype = {
         var user_custom_editor_area_height = document.getElementById(editorID).offsetHeight; //editor为外部传入
         var toolbar_height = document.getElementsByClassName('hbs_toolbar')[0].offsetHeight;
         document.getElementsByClassName('hbs_edit_container')[0].style.height = user_custom_editor_area_height - toolbar_height + "px";
+        document.getElementsByClassName('editarea')[0].style.minHeight = user_custom_editor_area_height - toolbar_height + "px";
     },
     editorFun: function () {
         //功能
-        var bold = document.getElementsByClassName('hbs_bold')[0];
-        var italic = document.getElementsByClassName('hbs_italic')[0];
-        // var fontsize = document.getElementsByClassName('hbs_fontsize')[0];
-        bold.onclick = function () {
-            var bold = document.execCommand('bold', false, null);
-            console.log(bold);
+        var fun_btn = document.getElementsByClassName('toolbar_btn');
+        for(var i = 0; i < fun_btn.length; i++){
+            fun_btn[i].onclick = function(){
+                document.execCommand(this.getAttribute('data-funname'), false, this.getAttribute('data-value'))
+            }
         }
 
-        italic.onclick = function () {
-            var italic = document.execCommand('italic', false, null);
-            console.log(italic);
-        }
 
-        // fontsize.onclick = function () {
-        //     var fontsize = document.execCommand('FontSize', false, "100");
-        //     console.log(fontsize);
+
+        // var bold = document.getElementsByClassName('hbs_bold')[0];
+        // bold.onclick = function () {
+        //     var bold = document.execCommand('bold', false, null);
+        //     console.log(bold);
         // }
     }
 

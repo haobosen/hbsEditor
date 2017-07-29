@@ -16,17 +16,10 @@ html {
             width: 100%;
             background: #ccc;
             .toolbar_btn {
-                // width: 30px;
-                // height: 30px;
-                padding: 10px;
+                padding: 5px;
                 display:inline-block;
-                // font-size: 12px;
-                // text-align: center;
-                // line-height: 30px;
                 img {
-                    width: 20px;
-                    // height: 20px;
-                    // display:inline-block;
+                    width: 15px;
                 }
             }
         }
@@ -35,8 +28,12 @@ html {
             font-size: 14px;
             overflow: auto;
             .editarea {
-                
-                background: #eee;
+                // background: #eee;
+                blockquote {
+                    border-left: 6px solid red;
+    padding: 5px 0 5px 10px;
+    margin: 15px 0 15px 5px;
+                }
             }
         }
     }
