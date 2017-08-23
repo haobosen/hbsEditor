@@ -4,11 +4,18 @@ function hbsEditor() {}
 hbsEditor.prototype = {
     init: function (editorID) {
         // this.editorCreate(editorID);
+        this.editorInit();
         this.editorSize(editorID);
         this.editorFun();
     },
     editorConfig: function(){
-
+        return {
+            'bold':{
+                type:'bold',
+                img:'./img/bold.png',
+                value:''
+            }
+        }
     },
     editorCreate: function(editorID){
         //最外层div
@@ -23,6 +30,11 @@ hbsEditor.prototype = {
         var hbs_edit_container = document.createElement('div');
         hbs_edit_container.className = 'hbs_edit_container';
 
+        //实际编辑区
+        var editarea = document.createElement('div');
+        editarea.className = 'editarea';
+        editarea.contentEditable = 'true';
+
         //用户自定义编辑器区域
         var hbs_editor = document.getElementById(editorID);
         hbs_editor.appendChild(editor_main);
@@ -35,6 +47,7 @@ hbsEditor.prototype = {
 
     },
     editorSize: function(editorID){
+        console.log(this.editorConfig()['bold'])
         //尺寸初始化
         var user_custom_editor_area_height = document.getElementById(editorID).offsetHeight; //editor为外部传入
         var toolbar_height = document.getElementsByClassName('hbs_toolbar')[0].offsetHeight;
@@ -57,6 +70,18 @@ hbsEditor.prototype = {
         //     var bold = document.execCommand('bold', false, null);
         //     console.log(bold);
         // }
+    },
+    editorContent: function(){
+
+    },
+    editorInit: function(){
+
+        
+
+        document.getElementById('btn').onclick = function(){
+            console.log(document.getElementsByClassName('editarea')[0].innerHTML);
+            // console.log(document.getElementById('textareaeditor').value)
+        }
     }
 
 }
